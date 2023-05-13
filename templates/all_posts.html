@@ -1,0 +1,28 @@
+<link type="text/css" href="{{url_for ('static', filename='static/css/posts.css')}} rel = 'stylesheet'"/>
+
+{% extends 'base.html' %}
+ 
+{% block body %}
+<hr>
+<h2>Список статей</h2>
+
+<ul class="list-posts">
+{% for p in posts %}
+<li>
+    <div>
+        <button class="btn btn-link rounded-pill px-3" type="button">
+    <p class="title">
+        <a href="{{ url_for('showPost', alias=p.url)}}">{{p.title}}</a>
+    </p>
+</button>
+    </div>
+<div>
+      <button class="btn btn-light rounded-pill px-3" type="button">
+        <p class="annonce">{{ p.text[:150] | striptags }}</p>
+    </button>
+</div>
+
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

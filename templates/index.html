@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добрый день!
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="css/main.css">
+<div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <p><img src="/static/img/index/index2.jpg"></p>
+      </div>
+      <div class="col-md-6">
+          <p class="lead fw-normal">Вы учитесь на курсах по флористике?</p>
+          <p class="lead fw-normal">Или, может, желаете заказать букет для дорогого вам человека?</p>
+          <p class="lead fw-normal">Тогда этот ресурс - ваша волшебная палочка!</p>
+          <p class="lead fw-normal">Здесь вы можете научиться грамотно создавать букеты и получить советы по уходу за ними</p>
+          <p class="lead fw-normal">Для этого вам доступны два раздела сайта и форум, где вы можете общаться с единомышленниками</p>
+          <p class="lead fw-normal">Смелее переходите по ним и начинайте учиться новому!</p>
+          <a class="btn btn-sm btn-outline-secondary" href="/handbook">Справочник</a>
+          <a class="btn btn-sm btn-outline-secondary" href="/blossom">Создать букет</a>
+          <a class="btn btn-sm btn-outline-secondary" href="/all_posts">Форум</a>
+          <a class="btn btn-sm btn-outline-secondary" href="/add_post">Добавить статью</a>
+          <a class="btn btn-sm btn-outline-secondary" href="/profile">Профиль</a>
+      </div>
+    </div>
+{% endblock %}
